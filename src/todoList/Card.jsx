@@ -13,7 +13,6 @@ import * as Yup from 'yup';
 
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { useFormik } from "formik";
 import { TextField } from "@mui/material";
 
 const style = {
@@ -31,41 +30,22 @@ const style = {
 };
 
 
-import React, {  useEffect, useState } from "react";
-import axios from "axios";
+import React, {  useState } from "react";
+
 
 export default function Cards({ name,  id, DeleteData, item, EditData }) {
   
-  const [user, setUser] = useState([])
-  const [idx, setIdx] = useState([])
   
-  async function Getbyid(idx) {
-    try {
-      const { data } = await axios.get(`${Api}/${idx}`)
-      setUser(data.data)
-      
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    if (idx) {
-      const fetchData = async () => {
-        await Getbyid(idx);
-      };
-      fetchData();
-    }
-  }, [idx])
-
-
   
-
+  
+  
+  
+  
      const [open, setOpen] = React.useState(false);
     // const handleChangefile = (event) => {
     //   formik.setFieldValue("Images", event.target.files[0]);
     // };
-     const SignupSchema = Yup.object().shape({
+    const SignupSchema = Yup.object().shape({
      Name: Yup.string()
        .min(4, 'Too Short!')
        .max(50, 'Too Long!')
@@ -74,30 +54,23 @@ export default function Cards({ name,  id, DeleteData, item, EditData }) {
        .min(5, 'Too Short!')
        .max(50, 'Too Long!')
        .required('Required'),
-   });
+      });
       
-      const formik = useFormik({
-      initialValues: {
-  Name: user?.name || "",
-  Description: user?.description || "",
-  Id: user?.id || null,
-} ,
-          enableReinitialize: true,
-           validationSchema:SignupSchema,
-        onSubmit: (values) => {
-        
-        const formData = new FormData();
-        formData.append("Name", values.Name);
-        formData.append("Description", values.Description);
-        formData.append("Id" , values.Id);
-        
-        EditData( formData)
-        console.log(formData);
-        
-          handleClose()
-      },
-    });
+  const [idx, setIdx] = useState([])
+  const [Name, setName] = useState("")
+  const [Descripton, setDescription] = useState("")
       
+  function Edit(e) {
+    e.preventDefault()
+    let data = {
+      name: Name, 
+      descripton: Descripton, 
+      id: null
+    }
+
+    EditData(idx, data)
+    handleClose()
+  }
       
        
     const handleOpen = () => {
@@ -116,38 +89,25 @@ export default function Cards({ name,  id, DeleteData, item, EditData }) {
               
       >
         <Box sx={{ ...style, width: 500 }}>
-              <form onSubmit={formik.handleSubmit}>
+              <form onSubmit={Edit}>
+           
             <TextField
-              type="file"
-              name="images"
-              variant="outlined"
-              fullWidth
-              margin="normal"
-              onBlur={formik.handleBlur}
-              error={formik.touched.Name && Boolean(formik.errors.Name)}
-              helperText={formik.touched.Name && formik.errors.Name }
-            />
-            <TextField
-              onChange={formik.handleChange}
-              value={formik.values.Name}
+              onChange={(e)=> setName(e.target.value)}
+              value={Name}
               name="Name"
               variant="outlined"
                 fullWidth
                 margin="normal"
-                onBlur={formik.handleBlur}
-              error={formik.touched.Name && Boolean(formik.errors.Name)}
-              helperText={formik.touched.Name && formik.errors.Name }
+                
             />
             <TextField
-              onChange={formik.handleChange}
-              value={formik.values.Description}
+              onChange={(e)=> setDescription(e.target.value)}
+              value={Descripton}
               name="Description"
               variant="outlined"
               fullWidth
               margin="normal"
-              onBlur={formik.handleBlur}
-              error={formik.touched.Name && Boolean(formik.errors.Name)}
-              helperText={formik.touched.Name && formik.errors.Name }
+             
             />
             <Button type="submit" variant="contained" color="primary">
               Submit
@@ -195,6 +155,8 @@ export default function Cards({ name,  id, DeleteData, item, EditData }) {
         <Button onClick={()=> DeleteData(item.id)} sx={{backgroundColor:"red", color:"white", padding:"15px 30px"}} >BELETE</Button>
           <div className="container" onClick={() => {
             setIdx(item.id)
+            setName(item.name)
+            setDescription(item.description)
             handleOpen()
           }} >
           <a href="#" className="button type--C">

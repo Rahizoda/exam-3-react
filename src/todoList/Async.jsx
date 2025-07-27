@@ -56,7 +56,7 @@ const Async = () => {
 
     async function EditData(idx , data) {
         try {
-            await axios.put(`${Api}/${idx}` , data ,{
+            await axios.put(`${Api}?id=${idx}` , data ,{
   headers: { "Content-Type": "multipart/form-data" },
 })
             GetData()

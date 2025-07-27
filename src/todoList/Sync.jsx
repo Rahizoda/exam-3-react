@@ -160,9 +160,8 @@ const Sync = ({ data , PostData , DeleteData , EditData}) => {
       <div className="flex flex-wrap justify-center  m-auto gap-[30px] p-[100px_0px] items-center">
         {data.map((item, index) => {
           {
-            let Img = ''
             item.images?.map((image, index) => {
-              Img = (
+              return (
                 <img
                   className="w-[200px] h-[20px]  "
                   key={index}
@@ -172,11 +171,8 @@ const Sync = ({ data , PostData , DeleteData , EditData}) => {
                       : "https://www.truckeradvisor.com/media/uploads/profilePics/notFound.jpg"
                   }
                   />
-                  
               );
             });
-            console.log(Img);
-            
           }
           return (
             <Cards name={item.name} index={index} Img={Img} id={item.id} DeleteData={DeleteData} item={item} EditData={EditData}  />
