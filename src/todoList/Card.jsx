@@ -42,21 +42,9 @@ export default function Cards({ name,  id, DeleteData, item, EditData }) {
   
   
      const [open, setOpen] = React.useState(false);
-    // const handleChangefile = (event) => {
-    //   formik.setFieldValue("Images", event.target.files[0]);
-    // };
-    const SignupSchema = Yup.object().shape({
-     Name: Yup.string()
-       .min(4, 'Too Short!')
-       .max(50, 'Too Long!')
-       .required('Required'),
-       Description: Yup.string()
-       .min(5, 'Too Short!')
-       .max(50, 'Too Long!')
-       .required('Required'),
-      });
+   
       
-  const [idx, setIdx] = useState([])
+  const [idxx, setIdx] = useState([])
   const [Name, setName] = useState("")
   const [Descripton, setDescription] = useState("")
       
@@ -68,7 +56,7 @@ export default function Cards({ name,  id, DeleteData, item, EditData }) {
       id: null
     }
 
-    EditData(idx, data)
+    EditData(idxx, data)
     handleClose()
   }
       

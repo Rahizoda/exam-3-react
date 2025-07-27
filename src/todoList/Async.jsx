@@ -43,22 +43,10 @@ const Async = () => {
         }
     }
 
-//     async function EditData( data) {
-//         try {
-//             await axios.put(Api, data ,{
-//   headers: { "Content-Type": "multipart/form-data" },
-// })
-//             GetData()
-//         } catch (error) {
-//             console.error(error);
-//         }
-//     }
 
-    async function EditData(idx , data) {
+    async function EditData(idxx , data) {
         try {
-            await axios.put(`${Api}?id=${idx}` , data ,{
-  headers: { "Content-Type": "multipart/form-data" },
-})
+            await axios.put(`${Api}/${idxx}` , data )
             GetData()
         } catch (error) {
             console.error(error);
