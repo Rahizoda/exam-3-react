@@ -216,7 +216,7 @@ const Servicies = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className='w-[300px] bg-[url(./src/assets/image1122.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
+          <div className='w-[300px] bg-[url(src/assets/bgimages.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
             <div className='bg-[#1e212c9d] w-[100%] h-[100%] p-[20px] '>
               
               <img src={img9} alt="" />
@@ -251,7 +251,7 @@ const Servicies = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className='w-[300px] bg-[url(./src/assets/image1122.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
+          <div className='w-[300px] bg-[url(src/assets/bgimages.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
             <div className='bg-[#1e212c9d] w-[100%] h-[100%] p-[20px] '>
               
               <img src={img9} alt="" />
@@ -287,7 +287,7 @@ const Servicies = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className='w-[300px] bg-[url(./src/assets/image1122.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
+          <div className='w-[300px] bg-[url(src/assets/bgimages.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
             <div className='bg-[#1e212c9d] w-[100%] h-[100%] p-[20px] '>
               
               <img src={img9} alt="" />
@@ -322,7 +322,7 @@ const Servicies = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className='w-[300px] bg-[url(src/assets/image1122.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
+          <div className='w-[300px] bg-[url(src/assets/bgimages.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
             <div className='bg-[#1e212c9d] w-[100%] h-[100%] p-[20px] '>
               
               <img src={img9} alt="" />
