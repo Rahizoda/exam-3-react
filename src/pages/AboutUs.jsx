@@ -22,25 +22,20 @@ import "swiper/css/navigation";
 
 import "./style.css";
 
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-// Import Swiper React components
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-// import required modules
-import { FreeMode, Thumbs } from "swiper/modules";
 import Async from "../todoList/Async";
 
 const AboutUs = () => {
   return (
     <>
-      <div data-aos="fade-right" className="bg-[url(./assets/background1.png)] bg-no-repeat text-white text-center p-[100px_0px]">
+      <div data-aos="fade-right" className="bg-[url(src/assets/background1.png)] bg-no-repeat text-white text-center p-[100px_0px]">
         <p>
           {" "}
           <HomeIcon /> Services Search Engine Optimization

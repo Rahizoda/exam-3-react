@@ -34,7 +34,7 @@ const style = {
 import React, {  useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Cards({ name, Img, id, DeleteData, item, EditData }) {
+export default function Cards({ name,  id, DeleteData, item, EditData }) {
   
   const [user, setUser] = useState([])
   const [idx, setIdx] = useState([])
@@ -176,7 +176,7 @@ export default function Cards({ name, Img, id, DeleteData, item, EditData }) {
               sx={{height:"200px", borderRadius:"20px"}}
             component="img"
             height="200px"
-            image={Img.props.src}
+              image="https://www.truckeradvisor.com/media/uploads/profilePics/notFound.jpg" 
             alt="green iguana"
           />
           <CardContent>

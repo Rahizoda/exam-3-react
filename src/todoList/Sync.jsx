@@ -160,6 +160,7 @@ const Sync = ({ data , PostData , DeleteData , EditData}) => {
       <div className="flex flex-wrap justify-center  m-auto gap-[30px] p-[100px_0px] items-center">
         {data.map((item, index) => {
           {
+            let Img = ''
             item.images?.map((image, index) => {
               Img = (
                 <img
@@ -174,6 +175,8 @@ const Sync = ({ data , PostData , DeleteData , EditData}) => {
                   
               );
             });
+            console.log(Img);
+            
           }
           return (
             <Cards name={item.name} index={index} Img={Img} id={item.id} DeleteData={DeleteData} item={item} EditData={EditData}  />
