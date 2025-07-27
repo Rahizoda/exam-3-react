@@ -53,10 +53,10 @@ export default function Cards({ name,  id, DeleteData, item, EditData }) {
     let data = {
       name: Name, 
       descripton: Descripton, 
-      id: null
+      id: idxx
     }
 
-    EditData(idxx, data)
+    EditData(data)
     handleClose()
   }
       

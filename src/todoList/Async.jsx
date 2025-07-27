@@ -44,9 +44,9 @@ const Async = () => {
     }
 
 
-    async function EditData(idxx , data) {
+    async function EditData( data) {
         try {
-            await axios.put(`${Api}/${idxx}` , data )
+            await axios.put(Api , data )
             GetData()
         } catch (error) {
             console.error(error);
