@@ -43,7 +43,7 @@ import { FreeMode,  Thumbs } from 'swiper/modules';
 const CaseStudies = () => {
   return (
     <>
-      <div data-aos="zoom-in-right" className="bg-[url(./src/assets/background221122fdf.png)] bg-no-repeat text-white text-center p-[100px_0px]">
+      <div data-aos="zoom-in-right" className="bg-[url(./src/assets/backgroundqwertyu.png)] bg-no-repeat text-white text-center p-[100px_0px]">
         <p>
           {" "}
           <HomeIcon /> Home{" "}

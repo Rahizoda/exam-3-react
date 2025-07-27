@@ -56,7 +56,7 @@ const Servicies = () => {
   return (
     <>
     
-      <div data-aos="flip-right" className='bg-[url(./src/assets/background112211.png)] w-[100%] h-[130vh] text-white bg-no-repeat '>
+      <div data-aos="flip-right" className='bg-[url(./src/assets/backgroundqwertyu.png)] w-[100%] h-[130vh] text-white bg-no-repeat '>
 
         <div  className='flex justify-around items-center p-[150px_0px]'>
           
