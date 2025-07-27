@@ -52,7 +52,7 @@ export default function Cards({ name,  id, DeleteData, item, EditData }) {
     e.preventDefault()
     let data = {
       name: Name, 
-      descripton: Descripton, 
+      description: Descripton, 
       id: idxx
     }
 
