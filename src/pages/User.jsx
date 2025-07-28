@@ -41,7 +41,7 @@ const User = () => {
         </button>
       </Link>
 
-      <div data-aos="flip-up" className="w-[80%] rounded-2xl text-center shadow-[5px_10px_gray] m-[100px_auto] text-3xl">
+      <div data-aos="flip-up" className="w-[80%] mt-[100px] rounded-2xl text-center shadow-[5px_10px_gray] m-[100px_auto] text-3xl">
         <div className="flex justify-around flex-wrap items-center">
           {user.images?.length > 0 ? (
             user.images.map((image, index) => (
