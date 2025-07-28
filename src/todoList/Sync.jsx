@@ -139,7 +139,7 @@ const Sync = ({ data , PostData , DeleteData , EditData}) => {
       </Modal>
 
       <div className="flex items-center justify-around">
-        <h1 className="text-5xl "> Lisu Users 📃</h1>
+        <h1 className="text-5xl "> List Users 📃</h1>
 
         <button className="btn" onClick={handleOpen}>
           <svg
