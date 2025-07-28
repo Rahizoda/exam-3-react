@@ -27,7 +27,7 @@ const Layout = () => {
   
   return (
     <>
-      <div data-aos="zoom-in"  className=' flex justify-around items-center p-[30px] bg-[url(src/assets/bggiimmgg.png)] text-white ' >
+      <div data-aos="zoom-in"  className=' flex fixed top-0 left-0 z-20 w-[100%] bg-[#16164221] justify-around items-center p-[30px] bg-[url(src/assets/bggiimmgg.png)] text-white ' >
 
         <img src={img1} alt="" />
 
