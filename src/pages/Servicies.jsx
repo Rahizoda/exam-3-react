@@ -46,6 +46,8 @@ import img13 from "../assets/Benefits.png"
 import img14 from "../assets/image (1).png"
 import img15 from "../assets/small (1).png"
 import img16 from "../assets/small.png"
+import img17 from "../assets/bggiimmgg.png"
+
 
 
 
@@ -57,7 +59,7 @@ const Servicies = () => {
     <>
     
       <div data-aos="flip-right" className='bg-[url(./src/assets/bggiimmgg.png)] w-[100%] h-[130vh] text-white bg-no-repeat '>
-
+         <img className='absolute top-0 left-0 z-[-100] h-[150vh] w-[100%] '  src={img17} alt="" />
         <div  className='flex justify-around items-center p-[150px_0px]'>
           
         <div>
@@ -322,7 +324,7 @@ const Servicies = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className='w-[300px] bg-[url(src/assets/bgimages.png)] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
+          <div className='w-[300px] bg-[url(./src/assets/bgimages.png )] bg-no-repeat h-[300px] border border-gray-500 shadow-2xs ' >
             <div className='bg-[#1e212c9d] w-[100%] h-[100%] p-[20px] '>
               
               <img src={img9} alt="" />
