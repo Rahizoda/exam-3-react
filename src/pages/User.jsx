@@ -33,7 +33,7 @@ const User = () => {
   return (
     <>
       <Link to="/aboutus">
-        <button className="Btn">
+        <button className="Btn absolute top-[100px] left-[20px]">
           <div className="sign">
             <LogoutIcon/>
           </div>
