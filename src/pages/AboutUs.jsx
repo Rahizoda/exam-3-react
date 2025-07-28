@@ -37,7 +37,8 @@ import Async from "../todoList/Async";
 const AboutUs = () => {
   return (
     <>
-      <div data-aos="fade-right" className="bg-[url(./src/assets/bgimgyy.png)] mt-[100px] bg-no-repeat text-white text-center p-[100px_0px]">
+      <div data-aos="fade-up"
+     data-aos-duration="3000" className="bg-[url(./src/assets/bgimgyy.png)] mt-[100px] bg-no-repeat text-white text-center p-[100px_0px]">
             <img className="absolute top-0 left-0 h-[80vh] w-[100%] z-[-100] " src={img17} alt="" />
 
         <p>
